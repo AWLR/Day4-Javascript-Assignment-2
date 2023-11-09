@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <label>Enter your first number</label><br>
+    <input type="text" id="a1"><br>
+    <label>Enter your second number</label><br>
+    <input type="text" id="a2"><br>
+
+
+    <button onclick="add()">Add</button>
+    <button onclick="minus()">Minus</button>
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+
+
+    <script>
+
+        function add() {
+            var sum, a, b;
+            a = parseInt(document.getElementById("a1").value);
+            b = parseInt(document.getElementById("a2").value);
+            sum = a + b;
+            document.write("The answer is " + sum + ". <br><button onclick='ret()'>back</button>");
+        }
+        function minus() {
+            var sum, a, b;
+            a = parseInt(document.getElementById("a1").value);
+            b = parseInt(document.getElementById("a2").value);
+            sum = a - b;
+            document.write("The answer is " + sum + ". <br><button onclick='ret()'>back</button>");
+        }
+        function multiply() {
+            var sum, a, b;
+            a = parseInt(document.getElementById("a1").value);
+            b = parseInt(document.getElementById("a2").value);
+            sum = a * b;
+            document.write("The answer is " + sum + ". <br><button onclick='ret()'>back</button>");
+        }
+
+        function divide() {
+            var sum, a, b;
+            a = parseInt(document.getElementById("a1").value);
+            b = parseInt(document.getElementById("a2").value);
+            sum = a / b;
+            document.write("The answer is " + sum + ". <br><button onclick='ret()'>back</button>");
+
+        }
+
+        function ret() {
+            window.open("4pm assignment.html");
+        }
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
