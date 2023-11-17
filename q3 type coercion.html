@@ -10,10 +10,10 @@
 
 <body>
     <script>
-        document.write("<h1>Type Coercion</h1>" + "<br>")
+        document.write("<h1>Javascript Type Coercion</h1>" + "<br>")
 
         var num = 12;
-        var str = "Numeric to String Coercion " + num; //coercion : number to string
+        var str = "Any String " + num; //coercion : number to string
         document.write(str+ "<br>");
 
         var str="10";
@@ -24,10 +24,35 @@
         document.write(Boolean("" )+ "<br>"); // ""
         document.write(Boolean(1)+ "<br>"); // coercion : number to boolean
         document.write(Boolean(0)+ "<br>"); // ""
-       
 
-       
+        document.write("<h2>With arithmetics</h2>" + "<br>")
+        var a=2;b="2",c=true,d=false,e=3,f="f";
+        document.write((a+b)+ "<br>");  // for + it will concatenated the two values together , coerced both to string
+        document.write((a-b)+ "<br>");  //while for - * / will coercion values into numbers  
+        document.write((a*b)+ "<br>");
+        document.write((a/b)+ "<br>");
+        document.write((a+c)+ "<br>"); //2+(true=1) = 3
+        document.write((a-d)+ "<br>"); //2-(false=0) = 2
+        document.write((b+f)+ "<br>"); 
+        document.write((b*f)+ "<br>"); //nan , not a number
 
+        document.write("<h2>Booleans coercion </h2>" + "<br>")
+        document.write((a==b)+ "<br>"); //true
+        document.write((a===b)+ "<br>"); //false
+        document.write((a==c)+ "<br>"); //true
+        document.write((a===c)+ "<br>"); //false
+        document.write((a==d)+ "<br>"); //false
+        document.write((a===d)+ "<br>"); //false
+        document.write((a==b && a==e)+ "<br>") //false
+        document.write((a==b || a==e || b==c)+ "<br>") //true
+
+        document.write("<h2>isNAN() testing </h2>" + "<br>")
+        document.write((isNaN(a))+ "<br>"); //f
+        document.write((isNaN(b))+ "<br>"); //f
+        document.write((isNaN(c))+ "<br>"); //f , Number.isNaN() returns the false and true output as false only because it considers false as 0 and true as 1 here.
+        document.write((isNaN(d))+ "<br>"); //f
+        document.write((isNaN(f))+ "<br>"); //t
+        
     </script>
 </body>
 
