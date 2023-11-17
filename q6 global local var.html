@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global and local variable</title>
 </head>
+
 <body>
     <script>
-        
-        function check(){
-           var a=5; //local variable
-           window.a=10;//global variable
-           document.write("This is local variable -> "+a +"<br>");
-           document.write("This is global variable -> "+window.a);
+
+        var b = 20; //global variable
+
+        function check() {
+
+            let a = 5; //local variable 
+            window.a = 10;//global variable declared within the function
+            var c = 25; //another local variable
+           
+            document.write("This is local variable -> " + a + "<br>");
+            document.write("This is global variable -> " + b + " & " + window.a + "<br>");
+            //even the global and local share the same variable name, it still output correctly without error
+            //so this shows that the local variable does not affect the global variable in this case
         }
         check();
 
-        //so this shows that even the global and local variable share the same name but they do not effect each other
-    
+        document.write(b + " & " + window.a + "<br>");  //global variable can be access anywhere within the script
+        document.write(c + "<br>");  //error //while local variable cannot be access outside of the function/local scope
+
     </script>
-    
+
 </body>
+
 </html>
